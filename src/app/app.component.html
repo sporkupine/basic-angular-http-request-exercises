@@ -31,8 +31,24 @@
             class="form-control"
             ngModel
           />
+          <br />
           <button class="btn btn-success" type="submit">Create Movie</button>
+          <hr />
         </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" type="button" (click)="onFetchMovies()">Fetch Movies</button>
+      <br /><br />
+      <h3>Submitted Movies:</h3>
+      <div class="card" *ngFor="let movie of loadedMovies">
+        <div class="card-body">
+          <h6 class="card-title"> {{ movie.title }}</h6>
+          <p class="card-text"> {{ movie.genre }}</p>
+        </div>
+
       </div>
     </div>
   </div>
